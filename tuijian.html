@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>207-万紫豪</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <style>
+        body{
+            min-width: 1000px;
+            background-color: rgb(255, 255, 255);
+        }
+        ul,div,li,h2,h3,h4,a,p,span{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        a{
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        img{
+            display: block;
+            border: none;
+        }
+
+        #header{
+            display: flex;
+            width: 100%;
+        }
+
+        #header span{
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #header span:nth-child(1){
+            color: #52ad8a;
+        }
+
+        #header hr{
+            width: 30px;
+            height: 3px;
+            background-color: #52ad8a;
+        }
+
+        #main{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            margin-left: 30px;
+            margin-bottom: 100px;
+        }
+
+        #main>span{
+            width: 100%;
+            color: #999;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgb(225, 225, 225);
+        }
+
+        .nr{
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgb(225, 225, 225);
+        }
+
+        .nr>img{
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+        }
+
+        .list{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 20px;
+            width: 78%;
+        }
+
+        .list li{
+            line-height: 30px;
+
+        }
+
+        .list li:nth-child(1){
+            font-size: 26px;
+            width: 100%;
+        }
+
+        .list li:nth-child(2){
+            font-size: 20px;
+            width: 60px;
+            height: 30px;
+            background-color: #a0e6ca85;
+            color: #449475;
+            font-weight: bold;
+            border: 1px solid #a0e6ca;
+            text-align: center;
+            margin-right: 10px;
+            line-height: 30px;
+        }
+
+        .list li:nth-child(3){
+            display: flex;
+            color: red;
+            font-size: 20px;
+            margin-right: 50px;
+        }
+
+        .list li:nth-child(3) h4{
+            color: red;
+            font-size: 28px;
+        }
+
+        .list li:nth-child(4){
+            font-size: 22px;
+        }
+
+        .tw{
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tw>p{
+            width: 100%;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .tw img{
+            width: 100%;
+        }
+
+        .tw div{
+            margin-top: 10px;
+            width: 100%;
+            background-color: rgb(146, 146, 146,0.2);
+            display: flex;
+            line-height: 120px;
+            font-size: 24px;
+
+        }
+
+        .tw div img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            padding: 10px;
+            
+        }
+
+        .tw div p{
+            margin-left: 10px;
+            width: 80%;
+            letter-spacing: 2px;
+        }
+
+        .tw span{
+            width: 8%;
+            color: #52ad55;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .back{
+            width: 160px;
+            height: 60px;
+            background-color: rgb(228, 228, 228);
+            border: 1px solid #fff;
+            border-radius: 25px;
+            line-height: 60px;
+            text-align: center;
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            position: fixed;
+            bottom: 120px;
+            right: 0;
+            /* display: none; */
+        }
+
+        #footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            height: 100px;
+            font-size: 20px;
+            background-color: #fff;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        #footer li{
+            line-height: 60px;
+            width: 100vw;
+            text-align: center;
+        }
+
+        #footer li p{
+            color: #000;
+            margin-top: 5px;
+            line-height: 10px;
+
+        }
+
+        #footer li .iconfont{
+            font-size: 40px;
+            color: #000;
+        }
+
+        #footer li:nth-of-type(4) span{
+            color: rgb(118, 199, 118);
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        #footer li:nth-of-type(4) p{
+            color: rgb(118, 199, 118);
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <span>综合<hr></span>
+        <span>新房</span>
+        <span>二手房</span>
+        <span>租房</span>
+        <span>商业地产</span>
+        <span>装修</span>
+    </div>
+
+    <div id="main">
+        <span>2022.12.13 17:00 更新</span>
+        <div class="nr">
+            <img src="../images/z1.jpg" alt="">
+            <ul class="list">
+                <li><h3>明秀庄园 4室2厅 148.5㎡</h3></li>
+                <li><span>安选</span></li>
+                <li><h4>495</h4>万</li>
+                <li>中山 秀月</li>
+            </ul>
+            <div class="tw">
+                <p>「二手房」实得二百多平明秀庄园44中房南北通厅五明4室2厅清水 房款可</p>
+                <img src="../images/z1.jpg" alt="">
+                <div>
+                    <img src="../images/renw1.jpg" alt="">
+                    <p>韩培培 4.7分 乾顺房地产总部</p>
+                    <span class="iconfont icon-xiaoxi1"></span>
+                    <span class="iconfont icon-dianhua"></span>                
+                </div>
+            </div>
+        </div>
+
+        <div class="nr">
+            <img src="../images/z2.jpg" alt="">
+            <ul class="list">
+                <li><h3>湾里南小区 2室1厅 69.2㎡</h3></li>
+                <li><span>安选</span></li>
+                <li><h4>66</h4>万</li>
+                <li>开发区 湾里</li>
+            </ul>
+            <div class="tw">
+                <p>「二手房」湾里南两室一厅精装修一天没住</p>
+                <img src="../images/z2.jpg" alt="">
+                <div>
+                    <img src="../images/renw2.jpg" alt="">
+                    <p>孙作山 4.1分 金钥匙房产安盛店</p>
+                    <span class="iconfont icon-xiaoxi1"></span>
+                    <span class="iconfont icon-dianhua"></span>                
+                </div>
+            </div>
+        </div>
+
+        <div class="nr">
+            <img src="../images/z3.jpg" alt="">
+            <ul class="list">
+                <li><h3>民兴花园(西区) 2室2厅 94.4㎡</h3></li>
+                <li><span>安选</span></li>
+                <li><h4>321</h4>万</li>
+                <li>沙河口 79中</li>
+            </ul>
+            <div class="tw">
+                <p>「二手房」79民兴花园2期 洋房2楼 南北 精装修 看房有钥匙</p>
+                <img src="../images/z3.jpg" alt="">
+                <div>
+                    <img src="../images/renw3.jpg" alt="">
+                    <p>陈晓亮 4分 安鑫地产中山公园79中店</p>
+                    <span class="iconfont icon-xiaoxi1"></span>
+                    <span class="iconfont icon-dianhua"></span>                
+                </div>
+            </div>
+        </div>
+
+        <div class="nr">
+            <img src="../images/z4.jpg" alt="">
+            <ul class="list">
+                <li><h3>侯一小区 4室2厅 135.9㎡</h3></li>
+                <li><span>安选</span></li>
+                <li><h4>238</h4>万</li>
+                <li>沙河口 侯家沟</li>
+            </ul>
+            <div class="tw">
+                <p>「二手房」春柳 别墅 350可议 精装修带大院</p>
+                <img src="../images/z4.jpg" alt="">
+                <div>
+                    <img src="../images/renw4.jpg" alt="">
+                    <p>佐婷婷 4.8分 佳鸿地产泡崖五店</p>
+                    <span class="iconfont icon-xiaoxi1"></span>
+                    <span class="iconfont icon-dianhua"></span>                
+                </div>
+            </div>
+        </div>
+
+        <div class="nr">
+            <img src="../images/z5.jpg" alt="">
+            <ul class="list">
+                <li><h3>侯一小区 1室1厅 47㎡</h3></li>
+                <li><span>安选</span></li>
+                <li><h4>58</h4>万</li>
+                <li>沙河口 侯家沟</li>
+            </ul>
+            <div class="tw">
+                <p>「二手房」春柳地铁,精装修拎包入住,近市场,近车站采光充足</p>
+                <img src="../images/z5.jpg" alt="">
+                <div>
+                    <img src="../images/g2.png" alt="">
+                    <p>孟裴裴 4.5分 双鸿房屋二十四城店</p>
+                    <span class="iconfont icon-xiaoxi1"></span>
+                    <span class="iconfont icon-dianhua"></span>                
+                </div>
+            </div>
+        </div>
+
+        <div class="nr">
+            <img src="../images/z6.jpg" alt="">
+            <ul class="list">
+                <li><h3>绿波花园 2室1厅 75.6㎡</h3></li>
+                <li><span>安选</span></li>
+                <li><h4>99.3</h4>万</li>
+                <li>沙河口 绿波</li>
+            </ul>
+            <div class="tw">
+                <p>「二手房」沙区绿波花园封闭小区框架南北户型好拎包入住</p>
+                <img src="../images/z6.jpg" alt="">
+                <div>
+                    <img src="../images/g1.png" alt="">
+                    <p> 张双梅 4.8分 铭星房地产五一广场店</p>
+                    <span class="iconfont icon-xiaoxi1"></span>
+                    <span class="iconfont icon-dianhua"></span>                
+                </div>
+            </div>
+        </div>
+
+        <div class="back">
+            返回顶部
+        </div>
+    </div>
+
+    <ul id="footer">
+        <li>
+            <a href="index.html">
+            <span class="iconfont icon-zhuye2"></span>
+            <p>主页</p>
+            </a>
+        </li>
+        <li>
+            <a href="xiaoxi.html">
+            <span class="iconfont icon-xiaoxi"></span>
+            <p>消息</p>
+            </a>
+        </li>
+        <li>
+            <span class="iconfont icon-double-circle"></span>
+            <p>有料</p>  
+        </li>
+        <li>
+            <a href="tuijian.html">
+            <span class="iconfont icon-tuijian"></span>
+            <p>推荐</p>
+            </a>    
+        </li>
+        <li>
+            <a href="wode.html">
+            <span class="iconfont icon-wode"></span>
+            <p>我的</p>
+            </a>
+        </li>
+    </ul>
+
+    <script>
+        var back = document.querySelector('.back');
+        var main = document.getElementById('main');
+        window.addEventListener('scroll',function(){
+            if(window.pageYOffset >= main.offsetTop + 6000){
+                back.style.display = 'block';
+            }else{
+                back.style.display = 'none';
+            }
+            back.addEventListener('click',function(){
+                window.scroll(0,0);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>207-万紫豪</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
+    <style>
+        body{
+            min-width: 1000px;
+            background-color: rgb(228, 228, 228);
+        }
+        ul,li,h2,h3,a,p,span{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        a{
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        img{
+            display: block;
+            border: none;
+        }
+
+        #head{
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .dht{
+            display: flex;
+            width: 100%;
+        }
+        
+        .dht a{
+            width: 85%;
+            margin-left: 30px;
+            text-align: left;
+            color: #000;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .dht .iconfont{
+            width: 4%;
+            text-align: right;
+            color: #000;
+            font-weight: bold;
+            font-size: 30px;
+            margin-right: 2%;
+        }
+
+
+        .swiper-slide{
+            /* width: 100%; */
+            display: flex;
+        }
+
+        .swiper-slide img{
+            width: 100%;
+            /* height: 800px; */
+        }
+
+        .swiper-button-next,.swiper-button-prev{
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .gg{
+            margin-top: 20px;
+            display: flex;
+            height: 100px;
+            line-height: 100px;
+            background-image:linear-gradient(to right,#fff,#fff,rgb(255, 226, 200));
+            border-radius: 25px;
+        }
+
+        .gg h2{
+            margin-left: 50px;
+            width: 80%;
+            font-size: 40px;
+            flex-grow: 1;
+        }
+
+        .gg span{
+            width: 100%;
+            flex-grow: 1;
+            text-align: left;
+            font-size: 36px;
+        }
+
+        .gg div{
+            width: 40%;
+            height: 60px;
+            background-color: rgb(255, 119, 0);
+            margin: 20px;
+            line-height: 60px;
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+            flex-grow: 1;
+        }
+
+        .xx{
+            width: 99%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+
+        .xx ul{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .xinx{
+            margin-left: 30px;
+            display: flex;
+            width: 100%;
+        }
+
+        .xinx:nth-of-type(1) h2{
+            width: 100%;
+            font-size: 40px;
+        }
+
+        .xinx:nth-of-type(1) span{
+            width: 100%;
+            text-align: right;
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        .xinx:nth-of-type(2) span{
+            width: 100px;
+            background-color: rgb(244, 244, 244);
+            text-align: center;
+            border: 1px solid #888;
+            font-size: 24px;
+            margin: 10px;
+        }
+
+        .xinx:nth-of-type(3) ul li{
+            width: 33%;
+            display: flex;
+            margin-top: 20px;
+            line-height: 20px;
+            font-size: 30px;
+        }
+
+        .xinx:nth-of-type(4) ul li{
+            width: 35%;
+            margin-top: 20px;
+            font-size: 22px;
+        }
+
+        .xinx:nth-of-type(4) ul li span{
+            width: 100%;
+            margin-right: 20px;
+            color: #999;
+        }
+        
+        .xinx:nth-of-type(5){
+            width: 100%;
+            margin-top: 20px;
+            font-size: 22px;
+        }
+
+        .xinx:nth-of-type(5) span{
+            /* width: 100%; */
+            margin-right: 20px;
+            color: #999;
+            font-size: 24px;
+        }
+
+        .xinx:nth-of-type(6) ul{
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .xinx:nth-of-type(6) ul li{
+            width: 30%;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 22px;
+            color: rgb(46, 46, 197,0.8);
+            height: 60px;
+            line-height: 60px;
+            font-weight: bold;
+            background-color: rgba(118, 180, 255, 0.2);
+        }
+
+        .dianhua{
+            margin: 0;
+            display: flex;
+            width: 100%;
+            height: 80px;
+            background-color: rgb(247, 197, 104,0.5);
+            border: 1px solid #fff;
+        }
+
+        .dianhua ul{
+            width: 100%;
+            /* display: flex; */
+        }
+
+        .dianhua ul li{
+            width: 500px;
+            display: flex;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .dianhua span{
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            text-align: right;
+            margin-right: 1%;
+            margin-top: 10px;
+            font-size: 50px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            color: rgb(247, 197, 104) ;
+            background-color: #fff;
+            
+        }
+
+        .yhhd{
+            height: 600px;
+            width: 99%;
+            margin-top: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .yhhd ul{
+            width: 100%;
+            margin-left: 30px;
+            display: flex;
+        }
+
+        .yhhd ul li{
+            text-align: right;
+            width: 100%;
+            margin-right: 10px;
+            font-size: 26px;
+        }
+
+        .yhhd ul li h2{
+            text-align: left;
+        }
+
+        .yhhd .bm{
+            width: 98%;
+            margin: 20px auto;
+            display: flex;
+            border: 2px solid orange;
+            background-color: rgb(255, 166, 0,0.1);
+            border-radius: 5px;
+        }
+
+        .yhhd .bm+.bm{
+            border: 2px solid rgb(0, 255, 0);
+            background-color: rgb(0, 255, 0,0.1);
+            border-radius: 5px;
+        }
+
+        .yhhd .bm ul{
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%px;
+            /* background-color: aqua; */
+            margin: 10px;
+        }
+
+        .yhhd .bm ul li{
+            margin: 20px;
+            text-align: left;
+            width: 100%;
+            line-height: 30px;
+        }
+
+        .yhhd .bm span{
+            width: 130px;
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            background-color: #fff;
+            color: orange;
+            text-align: center;
+            font-weight: bold;
+            margin-right: 1%;
+            margin-top: 100px;
+            border: 2px solid orange;
+        }
+
+        .yhhd .bm+.bm span{
+            color: rgb(2, 139, 2);
+            border: 2px solid rgb(0, 255, 0);
+        }
+
+        .tjfy{
+            height: 400px;
+            width: 99%;
+            margin-top: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tjfy ul{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .tjfy h2{
+            margin-left: 20px;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 40px;
+        }
+
+        .tjfy>ul li{
+            width: 100%;
+        }
+
+        .tjfy>ul li+li{
+            margin-left: 20px;
+            font-size: 24px;
+        }
+
+        .tjfy>ul li span{
+            margin-right:20px ;
+        }
+
+        .tjfy div{
+            margin-left: 20px;
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #999;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .tjfy div ul{
+            display: flex;
+            width: 100%;
+            margin: 20px;
+        }
+
+        .tjfy div ul li{
+            width: 100%;
+            line-height: 40px;
+            color: red;
+        }
+
+        .tjfy div ul li span{
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .tjfy div ul li+li{
+            color: #000;
+        }
+
+        .tjfy div p{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #999;
+            line-height: 20px;
+            color: rgb(255, 96, 96);
+        }
+
+        .ssdt{
+            display: flex;
+            width: 100;
+            width: 99%;
+            margin-top: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+
+        .ssdt .t1{
+            display: flex;
+            width: 100%;
+        }
+
+        .ssdt .t1 li{
+            margin-left: 20px;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 24px;
+        }
+
+        .ssdt .t1 li+li{
+            text-align: right;
+            margin-right: 5px;
+        }
+
+        .jlist{
+            height: 850px;
+            width: 99%;
+        }
+        
+        .jlist li{
+            display: flex;
+            width: 100%;
+            margin: 20px;
+        }
+
+        .jlist img{
+            width: 250px;
+            /* width: 100%; */
+            height: 220px;
+            flex-grow: 1;
+        }
+
+        .jlist div{
+            display: flex;
+            margin-left: 20px;
+            width: 80%;
+            flex-wrap: wrap;
+        }
+
+        .jlist div h2{
+            width: 100%;
+            /* text-align: right; */
+        }
+
+        .jlist div span{
+            width: 100%;
+            /* background-color: aqua; */
+            text-align: right;
+            margin-right: 5px;
+        }
+
+        #footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            height: 100px;
+            font-size: 20px;
+            background-color: #fff;
+            z-index: 100;
+        }
+
+        #footer li{
+            width: 100vw;
+            text-align: center;
+        }
+
+        #footer li div{
+            background-color: rgba(0, 0, 0);
+            height: 80px;
+            margin: 10px auto;
+            width: 90%;
+            color: rgb(118, 94, 51);
+            font-weight: bold;
+            line-height: 40px;
+        }
+
+        #footer li:nth-of-type(3) div{
+            background-color: rgba(113, 82, 28, 0.675);
+            height: 80px;
+            margin: 10px auto;
+            width: 90%;
+            color: #fff;
+            line-height: 40px;
+        }
+
+        .icon-tuijian,.icon-chuzu{
+            font-size: 50px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <div class="dht">
+            <a href="javascript:;" onclick="javascript:history.go(-1);"><</a>
+            <span class="iconfont icon-fenxiang1"></span>
+            <span class="iconfont icon-icon_pk"></span>
+            <span class="iconfont icon-xiaoxi"></span>
+        </div>
+    </div>
+
+    <div class="swiper tupian">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../images/x1.JPG" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/x2.JPG" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/x3.JPG" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="gg">
+        <h2>VR带看</h2>
+        <span>在线语音沟通，专家解疑</span>
+        <div>
+            立即带看
+        </div>
+    </div>
+
+    <div class="xx">
+        <ul>
+            <li class="xinx">
+                <h2>万科公园都会</h2>
+                <span>更多信息></span>
+            </li>
+            <li class="xinx">
+                <span>在售</span>
+                <span>住宅</span>
+                <span>万科集团</span>
+                <span>装修交付</span>
+                <span>大户型</span>
+                <span>VR看房</span>
+            </li>
+            <li class="xinx">
+                <ul>
+                    <li><h2>18500</h2>元/²</li>
+                    <li><h2>153</h2>万元/套起</li>
+                    <li><h2>3</h2>室</li>
+                </ul>
+            </li>
+            <li class="xinx">
+                <ul>
+                    <li><span>开盘</span> 2021.6.27</li>
+                    <li><span>交房</span> 2023年7月</li>
+                </ul>
+            </li>
+            <li class="xinx">
+                <span>地址</span> 甘井子-机场新区 张前路地铁2号线中革...            
+            </li>
+            <li class="xinx">
+                <ul>
+                    <li>开盘通知</li>
+                    <li>变价通知</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="dianhua">
+        <ul>
+            <li><h2>400 810 9480</h2></li>
+            <li>致电售楼处,了解更多优惠信息</li>
+        </ul>
+
+        <span class="iconfont icon-dianhua"></span>
+    </div>
+
+    <div class="yhhd">
+        <ul>
+            <li><h2>优惠活动</h2></li>
+            <li>咨询优惠</li>
+        </ul>
+
+        <div class="bm">
+            <ul>
+                <li><h3>地铁公园三房改善综合住区</h3></li>
+                <li>地铁公园三房改善综合住区</li>
+                <li>28人已报名</li>
+            </ul>
+
+            <span>立即报名</span>
+        </div>
+
+        <div class="bm">
+            <ul>
+                <li><h3>免费专车 专属座驾</h3></li>
+                <li>随时看房 免费往返接送</li>
+                <li>23人已报名</li>
+            </ul>
+
+            <span>立即报名</span>
+        </div>
+    </div>
+
+    <div class="tjfy">
+        <ul>
+            <li><h2>推荐房源</h2></li>
+            <li>
+                <span>一房一价</span>价格透明
+            </li>
+        </ul>
+        <div>
+            <ul>
+                <li><span>192.2</span>万</li>
+                <li>17263.6元/㎡</li>
+                <li>3室2厅2卫 111㎡</li>
+                <li>B6#-2单元-1</li>
+            </ul>
+            <p>咨询优惠</p>
+        </div>
+    </div>
+
+    <div class="ssdt">
+        <ul class="t1">
+            <li><h2>实时动态(190)</h2></li>
+            <li>查看更多></li>
+        </ul>
+        
+        <ul class="jlist">
+            
+        </ul>
+    </div>
+
+    <ul id="footer">
+        <li>
+            <span class="iconfont icon-tuijian"></span>
+            <p>关注</p>
+        </li>
+        <li>
+            <span class="iconfont icon-chuzu"></span>
+            <p>免费专车</p>
+        </li>
+        <li>
+            <div>
+            <span>微聊</span>
+            <p>快速在线咨询</p> 
+            </div>
+        </li>
+        <li>
+            <div>
+            <span>致电售楼处</span>
+            <p>了解更多优惠信息</p>
+            </div>
+        </li>
+    </ul>
+
+
+    <script src="../swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".tupian", {
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+
+    <script>
+        var json = [
+                {
+                    img:"../images/j1.jpg",
+                    title:"万达-银杏里洋房98平样板间",
+                    content:"17小时前"
+                },
+                {
+                    img:"../images/j2.jpg",
+                    title:"小窑湾万达广场one鸟瞰图",
+                    content:"22小时前"
+                },
+                {
+                    img:"../images/j3.jpg",
+                    title:"3室2厅2卫108平小高层",
+                    content:"12-03"
+                },
+            ];
+
+            var ul = document.getElementsByClassName("ssdt")[0].getElementsByClassName("jlist")[0];
+
+            function addLI(li){
+                var n = `
+                    <img src = "${li.img}">
+                    <div>
+                        <h2>${li.title}</h2>
+                        <span>${li.content}</span>
+                    </div>
+                `;
+
+                var nli = document.createElement("li");
+                nli.innerHTML = n;
+                ul.appendChild(nli);
+            }
+
+            for(var i=0; i<json.length; i++){
+                addLI(json[i]);
+            }
+    </script>
+</body>
+</html>

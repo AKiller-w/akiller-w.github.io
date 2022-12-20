@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>207-万紫豪</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <style>
+        body{
+            min-width: 1410px;
+            background-color: rgb(255, 255, 255);
+        }
+        ul,div,li,h2,h3,a,p,span{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        a{
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        img{
+            display: block;
+            border: none;
+        }
+
+        #box{
+            width: 100%;
+            background-image: url(../images/bjt.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%,100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .list{
+            margin-top: 10px;
+            width: 30%;
+            height: 50px;
+            line-height: 50px;
+            display: flex;
+            margin-left: auto;
+        }
+
+        .list li{
+            width: 100%;
+            text-align: center;
+        }
+
+        .list li span{
+            font-size: 40px;
+            color: #fff;
+        }
+
+        #box .gr{
+            width: 100%;
+            display: flex;
+        }
+
+        #box .gr .zc{
+            width: 100%;
+            display: flex;
+        }
+
+        #box .gr .zc span{
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            background-color: rgba(184, 214, 184, 0.7);
+            text-align: center;
+            line-height: 70px;
+            font-size: 46px;
+            border-radius: 50%;
+            color: #fff;
+            margin: 20px;
+        }
+
+        #box .gr .zc ul{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        #box .gr .zc ul li{
+            width: 100%;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        #box .gr>a{
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-align: center;
+            margin-top: 35px;
+            margin-right: 20px;
+        }
+
+        #box .hy{
+            display: flex;
+            width: 100%;
+            background-color: rgb(255, 255, 255,0.5);
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #box .hy .iconfont{
+            font-size: 30px;
+            color: #fff;
+            background-color: orange;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            margin: 20px;
+        }
+
+        #box .hy h3{
+            text-align: left;
+            width: 100%;
+            font-size: 26px;
+            line-height: 80px;
+        }
+
+        #box .hy span{
+            text-align: right;
+            width: 100%;
+            margin-right: 5px;
+            font-size: 20px;
+            letter-spacing: 3px;
+            line-height: 80px;
+        }
+
+        #main{
+            display: flex;
+            width: 100%;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 200px;
+        }
+
+        #main .xx{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #main .xx li{
+            width: 25%;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        #main .xx li span{
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        #main .xx li .icon-falv{
+            font-weight: bold;
+            font-size: 32px;
+            color: rgb(0, 167, 31,0.5);
+        }
+
+        #main .xx li .icon-yusan{
+            color: rgb(0, 102, 255,0.5);
+        }
+
+        #main .xx li p{
+            margin: 10px;
+        }
+
+        .fc{
+            margin-left: 50px;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .fc h2{
+            width: 100%;
+            font-size: 32px;
+        }
+
+        .fc ul{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .fc ul li{
+            width: 25%;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .fc li span{
+            display: inline-block;
+            font-weight: bold;
+            font-size: 40px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(127, 255, 212, 0.325);
+        }
+
+        .fc:nth-of-type(2) li span{
+            display: inline-block;
+            font-weight: bold;
+            font-size: 40px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(127, 193, 255, 0.325);
+        }
+
+        .fc p {
+            margin: 15px;
+        }
+
+        .wenz{
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .wenz li{
+            width: 100%;
+            margin-left: 20px;
+            border-bottom: 1px solid rgb(220, 219, 219,0.7);
+        }
+
+        .wenz li+li{
+            margin: 0;
+        }
+
+        .wenz li span{
+            font-size: 22px;
+            font-weight: 600;
+            margin-left: 50px;
+            text-align: left;
+        }
+
+        .wenz li p{
+            margin-right: 5px;
+            text-align: right;
+            font-size: 20px;
+        }
+
+        #footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            height: 100px;
+            font-size: 20px;
+            background-color: #fff;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        #footer li{
+            line-height: 60px;
+            width: 100vw;
+            text-align: center;
+        }
+
+        #footer li p{
+            color: #000;
+            margin-top: 5px;
+            line-height: 10px;
+
+        }
+
+        #footer li .iconfont{
+            font-size: 40px;
+            color: #000;
+        }
+
+        #footer li:nth-of-type(5) span{
+            color: rgb(118, 199, 118);
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        #footer li:nth-of-type(5) p{
+            color: rgb(118, 199, 118);
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul class="list">
+            <li><span class="iconfont icon-zhinengwenda"></span></li>
+            <li><span class="iconfont icon-saoyisao"></span></li>
+            <li><span class="iconfont icon-quanjushezhi"></span></li>
+        </ul>
+
+        <div class="gr">
+            <div class="zc">
+                <a href="denglu.html"><span class="iconfont icon-wode"></span></a>
+                <a href="denglu.html">
+                    <ul>
+                        <li><h2>注册/登录</h2></li>
+                        <li>登录后可体验更多服务></li>
+                    </ul>
+                </a>
+            </div>
+            <a href="denglu.html">个人主页</a>
+        </div>
+
+        <div class="hy">
+            <span class="iconfont icon-libao"></span>
+            <h3>安居客会员</h3>
+            <span>立即登录领取新手礼包></span>
+        </div>
+    </div>
+
+    <div id="main">
+        <ul class="xx">
+            <li>
+                <span>99+</span>
+                <p>浏览历史</p>
+            </li>
+            <li>
+                <span>0</span>
+                <p>收藏关注</p>
+            </li>
+            <li>
+                <span>0</span>
+                <p>联系人</p>
+            </li>
+            <li>
+                <span>0</span>
+                <p>钱包优惠</p>
+            </li>
+            <li>
+                <span class="iconfont icon-yusan"></span>
+                <p>保障</p>
+            </li>
+            <li>
+                <span class="iconfont icon-falv"></span>
+                <p>法律咨询</p>
+            </li>
+        </ul>
+
+        <div class="fc">
+            <h2>房产工具</h2>
+            <ul>
+                <li>
+                    <span class="iconfont icon-fangzi"></span>
+                    <p>看房管理</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-jinronganquan"></span>
+                    <p>金融服务</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-baifenbi"></span>
+                    <p>查房价</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-jisuan"></span>
+                    <p>房贷计算</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-calculation"></span>
+                    <p>税费计算</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-shuqian"></span>
+                    <p>购房资格</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-baifenbi"></span>
+                    <p>贷款成数</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-bijiben-neirong"></span>
+                    <p>安居宝典</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-dianping"></span>
+                    <p>我的点评</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-icon_guanlianneirong
+                    "></span>
+                    <p>我的问答</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-jinghao"></span>
+                    <p>我的帖子</p>
+                </li> 
+            </ul>
+        </div>
+
+        <div class="fc">
+            <h2>房东服务</h2>
+            <ul>
+                <li>
+                    <span class="iconfont icon-home"></span>
+                    <p>房屋估价</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-zhuye2"></span>
+                    <p>租房管理</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-zulinhetongbaobiao"></span>
+                    <p>卖房管理</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-huangguan"></span>
+                    <p>速卖VIP</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-shangpu"></span>
+                    <p>商铺写字楼</p>
+                </li>
+                <li>
+                    <span class="iconfont icon-kaipiaoguanli-xian
+                    "></span>
+                    <p>房东必看</p>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="wenz">
+            <li><span>问卷调查</span></li>
+            <li><p>></p></li>
+        </ul>
+
+        <ul class="wenz">
+            <li><span>举报中心</span></li>
+            <li><p>></p></li>
+        </ul>
+
+        <ul class="wenz">
+            <li><span>在线客服</span></li>
+            <li><p>></p></li>
+        </ul>
+    </div>
+
+    <ul id="footer">
+        <li>
+            <a href="index.html">
+            <span class="iconfont icon-zhuye2"></span>
+            <p>主页</p>
+            </a>
+        </li>
+        <li>
+            <a href="xiaoxi.html">
+            <span class="iconfont icon-xiaoxi"></span>
+            <p>消息</p>
+            </a>
+        </li>
+        <li>
+            <span class="iconfont icon-double-circle"></span>
+            <p>有料</p>  
+        </li>
+        <li>
+            <a href="tuijian.html">
+            <span class="iconfont icon-tuijian"></span>
+            <p>推荐</p>
+            </a>    
+        </li>
+        <li>
+            <a href="wode.html">
+            <span class="iconfont icon-wode"></span>
+            <p>我的</p>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

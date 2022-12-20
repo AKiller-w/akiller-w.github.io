@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+
+    <title>207-万紫豪</title>
+    <style>
+        body{
+            min-width: 1000px;
+        }
+        ul,li,h1,a,p,span,form,input{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        a{
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        img{
+            display: block;
+            border: none;
+        }
+
+        #header{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        #header a{
+            font-size: 30px;
+            width: 100%;
+        }
+
+        #header h1{
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 10px;
+            letter-spacing: 4px;
+        }
+
+        #header span{
+            width: 100%;
+            font-size: 18px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+
+        #box{
+            display: fixed;
+            width: 190px;
+            height: 80px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .error{
+            display: none;
+            width: 190px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            font-size: 16px;
+            background-color: rgb(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        form{
+            margin-top: 50px;
+            width: 95%;
+            margin-left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        form .bd{
+            width: 100%;
+            display: flex;
+            margin-top: 10px;
+
+        }
+
+        .bd #sjh{
+            font-size: 24px;
+            height: 50px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid rgb(233, 233, 233);
+        }
+
+        .bd #yzm{
+            width: 100%;
+            height: 50px;
+            font-size: 24px;
+            border: none;
+            border-bottom: 1px solid rgb(233, 233, 233);
+        }
+
+        .bd #djs{
+            margin-left: 5px;
+            width: 180px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 24px;
+            background-color: rgb(23, 168, 23);
+            color: #fff;
+        }
+
+        .bd #pwd{
+            font-size: 24px;
+            height: 50px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid rgb(233, 233, 233);
+        }
+
+        .bd #dl{
+            font-size: 24px;
+            height: 50px;
+            width: 100%;
+            border: none;
+            color: #fff;
+            background-color: rgb(3, 91, 3,0.7);
+            margin-top: 20px;
+        }
+
+        .qtfs{
+            width: 100%;
+            display: flex;
+        }
+
+        .qtfs span{
+            width: 100%;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .qtfs span+span{
+            text-align: right;
+            margin-right: 50px;
+        }
+
+        .qtdl{
+            display: fixed;
+            width: 100%;
+            height: 200px;
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        .qtdl span{
+            width: 100%;
+            font-size: 20px;
+            color: #999;
+        }
+
+        .qtdl div{
+            font-size: 50px;
+            margin-top: 20px;
+        }
+
+        .qtdl .iconfont{
+            font-size: 50px;
+            margin: 50px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            padding: 10px;
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <a href="javascript:;" onclick="javascript:history.go(-1);"><</a>
+        <h1>登录后更精彩</h1>
+        <span>实现每一个人对于家的梦</span>
+    </div>
+
+    <div id="main">
+        <form action="wode.html" method="post" id="fm" name="fm" onsubmit="return checkform()">
+            <div class="bd">
+                <input type="text" id="sjh" name="sjh" class="input" placeholder="请输入手机号">
+            </div>
+
+            <div class="bd">
+                <input type="password" id="yzm" name="yzm" class="input" placeholder="请输入验证码">
+                <input type="button" value="获取验证码" id="djs" onclick="daojishi(this)">
+            </div>
+
+            <div class="bd">
+                <input type="password" id="pwd" name="pwd" class="input" placeholder="请输入密码">
+            </div>
+
+            <input type="checkbox" name="tongyi" value="agree" checked>阅读并同意《安居客用户服务协议》及《安居客隐私政策》
+
+            <div class="bd">
+                <input type="submit" value="登录" id="dl">
+            </div>
+
+        </form>
+
+        <div id="box">
+            <div class="error">请输入正确的11位手机号</div>
+            <div class="error">请输入正确的6位验证码</div>
+            <div class="error">请输入密码</div>
+        </div>
+
+        <div class="qtfs">
+            <span>手机验证码登录</span>
+            <span>忘记密码</span>
+        </div>
+
+        <div class="qtdl">
+            <span>其他登录方式</span>
+            <div class="tb">
+                <span class="iconfont icon-pingguo"></span>
+                <span class="iconfont icon-weixin"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var user = document.getElementById("sjh");
+        var error = document.getElementsByClassName("error");
+        var pwd = document.getElementById("pwd");
+        var yzm = document.getElementById("yzm");
+
+        user.onchange = checkuser; 
+        pwd.onchange = checkpwd;
+        yzm.onchange = checkyzm;
+        
+        function checkuser(){
+            if(user.value.length !=11 ){
+                error[0].style.display = "block";
+                return 0;
+            }
+            else{
+                error[0].style.display = "none";
+                return 1;
+            }
+        }
+
+        function checkpwd(){
+            if(pwd.value.length > 8 && pwd.value.length < 16){
+                error[2].style.display = "none";
+                return 1;
+            }
+            else{
+                error[2].style.display = "block";
+                return 0;
+            }
+        }
+
+        function checkyzm(){
+            if(yzm.value.length != 6){
+                error[1].style.display = "block";
+                return 0;
+            }
+            else{
+                error[1].style.display = "none";
+                return 1;
+            }
+        }
+
+        function checkform(){
+            var rs = checkuser()*checkpwd()*checkyzm();
+            if(rs == 0){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+
+    </script>
+
+    <script>
+        var countdown=60; 
+        function daojishi(val){ 
+            if (countdown == 0) { 
+                val.removeAttribute("disabled"); 
+                val.value="获取验证码"; 
+                countdown = 60; 
+            } 
+            else { 
+                val.setAttribute("disabled", true); 
+                val.value="重新发送(" + countdown + ")"; 
+                countdown--; 
+            } 
+        setTimeout(function() { 
+        daojishi(val) 
+        },1000) 
+        } 
+    </script>
+</body>
+</html>

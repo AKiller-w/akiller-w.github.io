@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>207-万紫豪</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
+    <style>
+        body{
+            min-width: 1000px;
+        }
+        ul,li,h3,a,p,span{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        a{
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        img{
+            display: block;
+            border: none;
+        }
+
+        #header{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #header .iconfont{
+            font-size: 40px;
+        }
+
+        #sousuo{
+            display: flex;
+            width: 100%;
+        }
+
+        .sc{
+            display: flex;
+            width: 80%;
+            height: 42px;
+            /* border:5px solid #fbee53; */
+            border-radius: 5px;
+            background-color: rgb(236, 236, 236);
+            font-size: 24px;
+            line-height: 42px;
+            margin-left: 20px;
+        }
+
+        #ssl{
+            width: 20%;
+            height: 40px;
+            border: none;
+            font-size: 20px;
+            line-height: 40px;
+            margin-left: 20px;
+            background-color: rgb(236, 236, 236);
+        }
+
+        .tb{
+            width: 8%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tb span{
+            width: 100%;
+            text-align: center;
+        }
+
+        #fl{
+            display: flex;
+            flex-wrap: wrap;
+            right: 0;
+            width: 10%;
+            height: 40px;
+            line-height: 40px;
+            text-align: right;
+        }
+
+        .icon-liebiao{
+            height: 18px;
+            font-size: 28px;
+        }
+
+        #fl span{
+            width: 100%;
+            margin: 5px;
+        }
+
+        .icon-search2{
+            font-size: 24px;
+            color: #999;
+        }
+
+        .jlist1,.jlist2{
+            padding-top: 15px;
+            display: flex;
+            flex-wrap: wrap; 
+            margin: 5px;
+            text-align: center;
+        }
+
+        .jlist1 li,.jlist2 li{
+            width: 18%;
+            flex-grow: 1;
+        }
+
+        .jlist1 li span{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .jlist1 li div span{
+            display: inline-block;
+            font-size: 40px;
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            line-height: 80px;
+            text-align: center;
+            border-radius: 25%;
+            font-weight: normal;
+            color: #fff;
+        }
+
+        .jlist1 li:nth-of-type(2) div span{
+            background-color: rgb(0, 152, 0);
+        }
+
+        .jlist1 li:nth-of-type(3) div span{
+            background-color: rgb(225, 144, 14);
+        }
+
+        .jlist1 li:nth-of-type(4) div span{
+            background-color: rgb(0, 149, 255);
+        }
+
+        .jlist1 li:nth-of-type(5) div span{
+            background-color: rgb(0, 152, 0);
+        }
+
+        .jlist2 span{
+            font-size: 22px;
+            margin: 5px;
+        }
+
+        .jlist2 li div span{
+            font-size: 40px;
+            line-height: 50px;  
+        }
+
+        .jlist2 .icon-zhuangxiu{
+            color: rgb(43, 43, 252);
+        }
+
+        .jlist2 .icon-chuzu{
+            color: rgb(0, 152, 0);
+        }
+
+        .jlist2 .icon-icon_xiaoqu
+{
+            color: rgb(225, 144, 14);
+        }
+
+        .jlist2 .icon-zufang{
+            color: rgb(225, 144, 14);
+        }
+
+        .jlist2 .icon-ditu1{
+            color: rgb(43, 161, 252);
+        }
+
+
+        #middle{
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            margin: 40px auto;
+            background-color: rgb(153, 153, 153,0.1);
+        }
+
+        .nr{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 30%;
+            margin: 20px;
+        }
+
+        .nr h3{
+            font-size: 36px;
+        }
+
+        .nr span{
+            font-size: 22px;
+            line-height: 55px;
+            letter-spacing: 2px;
+        }
+
+        .tab{
+            margin-top: 30px;
+        }
+
+        #tt{
+            width: 100%;
+            display: flex;
+            background-color: #fff;
+            z-index: 100;
+        }
+
+        #tt span{
+            display: inline-block;
+            width: 100vw;
+            text-align: center;
+            font-size: 30px;
+            margin: 5px;
+        }
+        
+        .tc{
+            display: none;
+        }
+
+        .show{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            display: block;
+        }
+
+        .btj{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tj{
+            display: flex;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            width: 46vw;
+            margin: 5px;
+            background-color: rgb(148, 148, 148,0.1);
+        }
+
+        .tj img{
+            height: 500px;
+            width: 100%;
+        }
+
+        .tj ul{
+            width: 100%;
+            margin-left: 10px;
+        }
+
+        .tj ul li{
+            font-size: 16px;
+            height: 40px;
+        }
+
+        .tj ul li h4{
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .tj ul li span{
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .tj ul li:last-child{
+            color: red;
+        }
+
+        .swiper-slide{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .swiper-slide ul{
+            width: 100vw;
+            margin: 10px auto;
+            margin-left: 5%;
+            text-align: left;
+        }
+
+        .swiper-slide .box{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .swiper-slide .box img{
+            width: 50%;
+            margin-top: 10px;
+            margin-left: 2%;
+        }
+
+        .ht{
+            display: flex;
+            width: 100%;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            border-bottom: 1px solid rgb(150, 150, 150,0.2);
+        }
+
+        .ht img{
+            width: 40%;
+            margin-left: 2%;
+            margin-right: 5%;
+        }
+
+        .ht ul{
+            width: 100%;
+        }
+
+        .ht ul li{
+            height: 120px;
+            line-height: 120px;
+        }
+
+        .ht ul li span{
+            margin-left: 10px;
+        }
+
+        .ht ul .jg{
+            font-size: 30px;
+            margin-left: 0;
+            font-weight: bold;
+        }
+
+        #footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            height: 100px;
+            font-size: 20px;
+            background-color: #fff;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        #footer li{
+            line-height: 60px;
+            width: 100vw;
+            text-align: center;
+        }
+
+        #footer li p{
+            color: #000;
+            margin-top: 5px;
+            line-height: 10px;
+
+        }
+
+        #footer li .iconfont{
+            font-size: 40px;
+            color: #000;
+        }
+
+        #footer li:nth-of-type(1) span{
+            color: #fff;
+            background-color: rgb(118, 199, 118);
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        #footer li:nth-of-type(1) p{
+            color: rgb(2, 107, 2);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <form action="" id="sousuo">
+            <div class="sc">
+                <label for="ssl">
+                    <span>大连</span>
+                </label>
+                <span class="iconfont icon-search2"></span>
+                <input type="text" id="ssl" name="ssl" placeholder="挑好房上安居客">
+            </div>
+            <div class="tb">
+                <span class="iconfont icon-fabu"></span>
+                <span>发布</span>
+            </div>
+            <div class="tb">
+                <span class="iconfont icon-ditu1"></span>
+                <span>地图找房</span>
+            </div>
+        </form>
+    </div>
+
+    <ul class="jlist1">
+            
+    </ul>
+    <ul class="jlist2">
+            
+    </ul>
+        
+    <div id="middle">
+        <div class="nr">
+            <h3>房价行情</h3>
+            <span>大连房价</span>
+        </div>
+        <div class="nr">
+            <h3>14269元/㎡</h3>
+            <span>二手房<span class="iconfont icon-xiangxiajiantou"></span>1.09%</span>
+        </div>
+        <div class="nr">
+            <h3>14460元/㎡</h3>
+            <span>新房<span class="iconfont icon-xiangxiajiantou"></span>6.65%</span>
+        </div>
+    </div>
+
+    <div class="tab">
+        <div id="tt">
+            <span>推荐</span>
+            <span>新房</span>
+            <span>二手房</span>
+            <span>租房</span>
+            <span>商业地产</span>
+            <span>装修</span>
+        </div>
+        <div class="tc show">
+            <div class="btj"> 
+                <a href="neirong.html">
+                    <div class="tj">
+                        <img src="../images/d1.jpg" alt="">
+                        <ul>
+                            <li><h4>万科大都会东港</h4></li>
+                            <li>建面83-160㎡</li>
+                            <li><span>9200</span>元/㎡</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="neirong.html">
+                    <div class="tj">
+                        <img src="../images/d2.jpg" alt="">
+                        <ul>
+                            <li><h4>华润置地云上</h4></li>
+                            <li>建面62-130㎡</li>
+                            <li><span>14000</span>元/㎡</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="neirong.html">
+                    <div class="tj">
+                        <img src="../images/d3.jpg" alt="">
+                        <ul>
+                            <li><h4>中传·时代</h4></li>
+                            <li>建面35-60㎡</li>
+                            <li><span>5500</span>元/㎡</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="neirong.html">
+                    <div class="tj">
+                        <img src="../images/d4.jpg" alt="">
+                        <ul>
+                            <li><h4>星湾宸院</h4></li>
+                            <li>建面272-291㎡</li>
+                            <li><span>30000</span>元/㎡</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="neirong.html">
+                    <div class="tj">
+                        <img src="../images/d5.jpg" alt="">
+                        <ul>
+                            <li><h4>碧桂园天誉</h4></li>
+                            <li>建面43-166㎡</li>
+                            <li><span>11500</span>元/㎡</li>
+                        </ul>
+                    </div>
+                </a>
+                
+                <a href="neirong.html">
+                    <div class="tj">
+                        <img src="../images/d6.jpg" alt="">
+                        <ul>
+                            <li><h4>维特奥幸福港湾</h4></li>
+                            <li>建面84-125㎡</li>
+                            <li><span>9600</span>元/㎡</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="neirong.html">
+                    <div class="tj">
+                        <img src="../images/d1.jpg" alt="">
+                        <ul>
+                            <li><h4>金弘基·九禧</h4></li>
+                            <li>建面78-125㎡</li>
+                            <li><span>11000</span>元/㎡</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <a href="neirong.html">
+                    <div class="tj">
+                        <img src="../images/d1.jpg" alt="">
+                        <ul>
+                            <li><h4>南山家里</h4></li>
+                            <li>建面61-123㎡</li>
+                            <li><span>40000</span>元/㎡</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="tc">
+            <div class="swiper hd1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>活动优惠></h1></li>
+                            <li>参与即享更多奖品</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/e1.jpg" alt="">
+                            <img src="../images/e2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>VR售楼处></h1></li>
+                            <li>足不出户,在线看房</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/e3.jpg" alt="">
+                            <img src="../images/e4.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>楼盘热榜></h1></li>
+                            <li>近一周人气榜</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/e5.jpg" alt="">
+                            <img src="../images/e6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ht">
+                <img src="../images/e1.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">9500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/e2.jpg" alt="">
+                <ul>
+                    <li><h2>万科大都会东港</h2></li>
+                    <li>中山 东港新区<span>写字楼 66-100㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/e3.jpg" alt="">
+                <ul>
+                    <li><h2>金湾璟和天地</h2></li>
+                    <li>开发区 小窑湾<span>住宅 86-110㎡</span></li>
+                    <li><span class="jg">9500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/e4.jpg" alt="">
+                <ul>
+                    <li><h2>英伦铭筑</h2></li>
+                    <li>金州 三十里堡<span>住宅/别墅 70-125㎡</span></li>
+                    <li><span class="jg">6400</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/e5.jpg" alt="">
+                <ul>
+                    <li><h2>万科翡翠之光二期</h2></li>
+                    <li>金州 五一路<span>住宅 83-125㎡</span></li>
+                    <li><span class="jg">9900</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/e6.jpg" alt="">
+                <ul>
+                    <li><h2>万科观贤别墅</h2></li>
+                    <li>甘井子 机场新区<span>别墅 125-155㎡</span></li>
+                    <li><span class="jg">500</span>万元/套起</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tc">
+            <div class="swiper hd1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>12月人气小区榜></h1></li>
+                            <li>西山水库热门必看小区</li>
+                        </ul>
+
+                        <div class="box">
+                            <img src="../images/f1.jpg" alt="">
+                            <img src="../images/f2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>舒适小户型></h1></li>
+                            <li>养老舒适小户型</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/f3.jpg" alt="">
+                            <img src="../images/f4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>低价房Top榜></h1></li>
+                            <li>超高性价比</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/f5.jpg" alt="">
+                            <img src="../images/f6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ht">
+                <img src="../images/f1.jpg" alt="">
+                <ul>
+                    <li><h2>昌平小区北西安路商圈车站二楼两室一厅</h2></li>
+                    <li>西安路 昌平小区</li>
+                    <li><span class="jg">83万</span>2室1厅1 59.7㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/f2.jpg" alt="">
+                <ul>
+                    <li><h2>2楼地铁300米马栏地铁的地段房龄新</h2></li>
+                    <li>马栏广场 宏良小区</li>
+                    <li><span class="jg">89.8万</span>2室1厅62.6㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/f3.jpg" alt="">
+                <ul>
+                    <li><h2>榜亿达三期现房精装修两室宽厅位置好新城</h2></li>
+                    <li>水师营 亿达第一郡(三期)</li>
+                    <li><span class="jg">89</span>2室1厅78.8㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/f4.jpg" alt="">
+                <ul>
+                    <li><h2>远洋假日赠送80平花园~精装修密码入户</h2></li>
+                    <li>快轨金石滩 远洋假日养生庄园</li>
+                    <li><span class="jg">99</span>2室2厅87㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/f5.jpg" alt="">
+                <ul>
+                    <li><h2>42万起!中山东港，中海星时代</h2></li>
+                    <li>跃进路 中海·星时代</li>
+                    <li><span class="jg">76</span>2室2厅42㎡</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tc">
+            <div class="swiper hd1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>温馨一居></h1></li>
+                            <li>黄金地段房</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/j1.jpg" alt="">
+                            <img src="../images/j2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>房东直租></h1></li>
+                            <li>个人好房出租</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/j3.jpg" alt="">
+                            <img src="../images/j4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>品牌公寓></h1></li>
+                            <li>甄选高品质</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/j5.jpg" alt="">
+                            <img src="../images/j6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ht">
+                <img src="../images/j1.jpg" alt="">
+                <ul>
+                    <li><h2>整租|中海万锦公馆，精装南...</h2></li>
+                    <li>体育新城 中海万锦公馆</li>
+                    <li><span class="jg">2100</span>元/月 3室2厅 100㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/j2.jpg" alt="">
+                <ul>
+                    <li><h2>整租|千山路地铁房大湾市场旁三...</h2></li>
+                    <li>山东路 千山路小区</li>
+                    <li><span class="jg">1400</span>元/月 1室2厅 60㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/j3.jpg" alt="">
+                <ul>
+                    <li><h2>整租|万达体育新城整租两至.</h2></li>
+                    <li>体育新城 万达体育新城</li>
+                    <li><span class="jg">1500</span>元/月 2室1厅 88㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/j4.jpg" alt="">
+                <ul>
+                    <li><h2>合租|月付!和平广场富国街..</h2></li>
+                    <li>和平广场 和平现代城</li>
+                    <li><span class="jg">700</span>元/月 3室1厅 25㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/j5.jpg" alt="">
+                <ul>
+                    <li><h2>合租|月付!华乐广场第一小..</h2></li>
+                    <li>华乐广场 海昌欣城</li>
+                    <li><span class="jg">700</span>元/月 5室3厅 25㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/j6.jpg" alt="">
+                <ul>
+                    <li><h2>整租|高新万达黄浦路华录园..</h2></li>
+                    <li>河口 山海一家</li>
+                    <li><span class="jg">1250</span>元/月 1室1厅 40㎡</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tc">
+            <div class="swiper hd1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>商铺出租></h1></li>
+                            <li>海量旺铺出租</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/k1.jpg" alt="">
+                            <img src="../images/k2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>尚铺出售></h1></li>
+                            <li>海量旺铺买就赚到</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/k3.jpg" alt="">
+                            <img src="../images/k4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>写字楼出租></h1></li>
+                            <li>海量热门楼盘出租</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/k5.jpg" alt="">
+                            <img src="../images/k6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ht">
+                <img src="../images/k1.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/k2.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/k3.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/k4.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/k5.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/k6.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tc">
+            <div class="swiper hd1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>打造高颜值></h1></li>
+                            <li>秘诀都在这</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/h1.jpg" alt="">
+                            <img src="../images/h2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>二居室设计></h1></li>
+                            <li>最新案例精选</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/h3.jpg" alt="">
+                            <img src="../images/h4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li><h1>现代美式></h1></li>
+                            <li>洋气的人都喜欢</li>
+                        </ul>
+                        <div class="box">
+                            <img src="../images/h5.jpg" alt="">
+                            <img src="../images/h6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ht">
+                <img src="../images/h1.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/h2.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/h3.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/h4.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/h5.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+            <div class="ht">
+                <img src="../images/h6.jpg" alt="">
+                <ul>
+                    <li><h2>大连金石滩鲁能胜地</h2></li>
+                    <li>开发区 金石滩<span>住宅/低密住宅 98-72㎡</span></li>
+                    <li><span class="jg">8500</span>元/㎡</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <ul id="footer">
+        <li>
+            <a href="index.html">
+            <span class="iconfont icon-zhuye2"></span>
+            <p>主页</p>
+            </a>
+        </li>
+        <li>
+            <a href="xiaoxi.html">
+            <span class="iconfont icon-xiaoxi"></span>
+            <p>消息</p>
+            </a>
+        </li>
+        <li>
+            <span class="iconfont icon-double-circle"></span>
+            <p>有料</p>  
+        </li>
+        <li>
+            <a href="tuijian.html">
+            <span class="iconfont icon-tuijian"></span>
+            <p>推荐</p>
+            </a>    
+        </li>
+        <li>
+            <a href="wode.html">
+            <span class="iconfont icon-wode"></span>
+            <p>我的</p>
+            </a>
+        </li>
+    </ul>
+
+    <script>
+        var jarr = [
+            {
+                content:"新房"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist1")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-loufangfangzi"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"二手房"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist1")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-home"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"租房"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist1")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-xiangzi"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"商铺写字楼"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist1")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-jinrudianpu"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"我是房东"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist1")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-yuechi"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"装修建材"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist2")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-zhuangxiu"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"免费看房"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist2")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-chuzu"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"找小区"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist2")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-icon_xiaoqu"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"租房实拍"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist2")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-zufang"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+
+        var jarr = [
+            {
+                content:"生活服务"
+            },
+        ];
+
+        var jlist = document.getElementsByClassName("jlist2")[0];
+        
+        jarr.forEach(function(v,i){
+            var nli = document.createElement("li");
+
+            nli.innerHTML =`
+                <div>
+                    <span class="iconfont icon-ditu1"></span>
+                </div>
+                <span>${v.content}</span>
+            `
+
+            jlist.appendChild(nli);
+        })
+    </script>
+
+    <script>
+        window.onscroll = function(){
+            var st = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if(st > 540){
+                tt.style.position = 'fixed';
+                tt.style.top = 0;
+            }
+            else{
+                tt.style.position = 'static';
+            }
+        }
+    </script>
+
+    <script>
+        var tab = document.getElementsByClassName("tab")[0];
+        var tt = document.getElementById("tt");
+        var span = tt.getElementsByTagName("span");
+        var tc = tab.querySelectorAll(".tc");
+
+        for(var i = 0;i<span.length;i++){
+            span[i].index = i;
+
+            span[i].onmouseover = function(){
+                for(var j = 0;j<span.length;j++){
+                    tc[j].classList.remove("show");
+                }
+                
+                tc[this.index].classList.add("show");
+            }
+        }
+    </script>
+
+    <script src="../swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".hd1", {
+            scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true,
+            },
+        });
+    </script>
+
+</body>
+</html>
